@@ -34,10 +34,16 @@ php artisan vendor:publish --tag=LaravelMinify
 
 ## Usage
 
-### for enable/disable in env
+### for enable/disable in .env
 
 ```php
-HTML_MINIFY=true
+MINIFY_ACTIVATE=true
+```
+
+### to disable it locally in .env
+
+```php
+MINIFY_ONLY_PRODUCTION=false
 ```
 
 ### exclude route name for from minify update config
