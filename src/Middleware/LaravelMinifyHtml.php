@@ -22,8 +22,7 @@ class LaravelMinifyHtml
 
 		if (
 			Config::get('htmlminify.activate')
-			&& Config::get('htmlminify.off_production')
-			&& (env('APP_ENV') == 'production')
+			&& (Config::get('htmlminify.only_production') === (env('APP_ENV') == 'production'))
 			&& $this->isResponseObject($response)
 			&& $this->isHtmlResponse($response)
 			&& !$this->isRouteExclude($request)
